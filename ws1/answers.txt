@@ -1,0 +1,15 @@
+T1: cd /home/ishigaki-cs25/cs131/ws1 && pwd
+T3: cd /home/ishikgaki-cs25/cs131/ws1
+T3: cd file logs/app01.log
+T3: cd file .env
+T4: ls -alhr
+T2: cd logs
+T2: ls ../data
+T5: ls -lsr
+T6: file size is 1048576, owner is ishigaki-cs25, and last modification time is June 9 22:23
+T7: ls Data?.csv
+T8: ls [[:upper:]]*
+T9: ls BACKUP.[0-9][0-9][0-9]
+T10: cp -r data/ backup/
+T11: mv readme.txt README.md
+T12: rm -ir backup/data
