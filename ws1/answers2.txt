@@ -1,0 +1,15 @@
+B1: grep 'city:Santa Barbara' /data/yelp/yelp_academic_dataset_business.json
+B2: grep -c 'state:CA' /data/yelp/yelp_academic_dataset_business.json
+B3: grep -i 'worth' /data/yelp/yelp_academic_dataset_business.json
+B4: grep -E 'Cofee|Café|Cafe' /data/yelp/yelp_academic_dataset_business.json
+B5: grep -E 'stars:(4\.5|5\.0)' /data/yelp/yelp_academic_dataset_business.json
+B6: grep -E 'stars:5,' /data/yelp/yelp_academic_dataset_business.json
+B7: grep -E '[[:alpha:]]+@[[:alpha:].]+\.[[:alpha:]]{2,}' /data/yelp/yelp_academic_dataset_review.json
+B8: grep -E '[[:digit:]]{3}-[[:digit:]]{3}-[[:digit:]]{4}' /data/yelp/yelp_academic_dataset_review.jso
+n
+B9: grep -E "\"name\":\"P" /data/yelp/yelp_academic_dataset_business.json
+B10: grep -ic "pizza" /data/yelp/yelp_academic_dataset_review.json
+B11: grep -n 'service' /data/yelp/yelp_academic_dataset_review.json
+B12: grep -v 'Restaurants' /data/yelp/yelp_academic_dataset_business.json
+B13: Stage 1 runs through the file and pulls all the lines stating "state":"CA", stage 2 finds the text "review_count":[ with any number ocurrences after it, stage 3 takes only the numbers from that, stage 4 sorts in reverse order, stage 5 shows top 3
+B14: grep '"city":"Santa Barabara"' yelp_academic_dataset_business.json \| jq -r '.name' \| sort 
