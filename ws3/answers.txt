@@ -1,0 +1,39 @@
+A1: ls -l > listing.txt AND date >> listing.txt
+A2: ls /nonexistent_dir 2> errors.txt
+A3: ls /nonexistent_dir 2> errors.txt
+A4: ls /nonexistent_dir /etc &> combined.txt
+A5: ls /nonexistent_dir /etc 2>/dev/null
+I see everything from /etc
+A6: sort fruits.txt | uniq
+A7: sort fruits.txt | uniq -c | sort -nr
+A8: grep -c ERROR server.log
+A9: grep ERROR server.log > errors_only.txt
+A10: grep -oE '^[A-Z]+' server.log | sort | uniq -c | sort -nr
+A11: grep -o '"state":"[A-Z][A-Z]"' /data/yelp/yelp_academic_dataset_business.json \ | cut -d'"' -f4 | sort \ | uniq -c \ | sort -nr \ | head -5 
+b1 id
+b2 ls -l fruits.txt
+first part says rw which means read and write, the next two both say r which means read only 
+echo "b3 test" > testfile.txt
+gives: -rw-rw-r-- 1 ishigaki-cs25 ishigaki-cs25 5 Jun 17 22:53 testfile.txt
+b3 unmask THEN eccho "test" > testfile.txt THEN ls -l testfile.txt
+b4 chmod u+rw secret.txt b5 chmod 640 fruits.txt
+b5 chmod 640 fruits.txt
+b6 find ws3 -type f -user ishigaki-cs25 -perm -u=w
+ C1: ishigaki-cs25@spark-833c:~/cs131/ws3$ cat > long.sh << 'EOF'
+while true; do
+  sleep 2
+  date +"[%T] tick"
+done
+EOF
+ishigaki-cs25@spark-833c:~/cs131/ws3$ bash long.sh > log.txt &
+[1] 924681
+ishigaki-cs25@spark-833c:~/cs131/ws3$ tail log.txt
+[23:02:36] tick
+[23:02:38] tick
+C2: shows job number 1+, running, and bash long.sh > log.txt &
+C3: fg then jobs
+after fg it stops, and it stays stop which is shown in jobs
+C4: bg
+C5: typing kill gives kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+C6: ps -p 925671
+C7: disown allows the process to run when the terminal closes by moving it somewhere else
