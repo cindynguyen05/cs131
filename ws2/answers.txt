@@ -1,0 +1,18 @@
+Q1: git add notes.md && git commit -m "ws2: add task line"
+Q2: git log --oneline | head -n 3
+Q3: git log --online
+Short hash of bad commit: 2e90f69
+Q4: git revert 2e90f69
+Q5: git rm --cached bigdata.bin THEN echo bigdata.bin >> .gitignore THEN git add .gitignore THEN git commit --amend
+Q6: git switch -c feature-summary
+Q7: echo "Summary line 1" >> summary.md
+ echo "Summary line 2" >> summary.md
+git add summary.md
+git commit -m "ws2: w4: add summary file"
+Q8: git diff main..feature-summary
+Q9: git switch main
+git merge feature-summary
+Q10: git branch -d feature-summary
+Q11: there were no errors, i dont know how to continue, do i am going to skip this for now and try again tomorrow
+Q15: git fetch origin THEN git log HEAD..origin/main --oneline
+Q16: git fetch downloads remote changes without merging them into your working branch unlike pull
