@@ -1,0 +1,14 @@
+T1: cd /home/ishigaki-cs25/cs131/ws1pt2 to use an absolute path and then pwd to print the working directory
+T2: ls ../data
+T3: file logs/app01.log and file .env
+T5: ls -alrh
+T5: ls -lS
+T6: from ls -l we get -rw-rw-r-- 1 ishigaki-cs25 ishigaki-cs25  185 Jun 22 22:23 answers.txt
+    first ishigaki-cs25 is username of file owner, second is group that owns files, june 22 
+    22:23"
+T7: from ws1, cd to data, then ls Data?.csv
+T8: ls [[:upper:]]*
+T9: ls BACKUP.[0-9][0-9][0-9]
+T10: cp -r data/ backup/ and ls backup to verify
+T11: mv data/readme.txt data/README.md
+T12: rm -ir backup/data then type y for yes or n for no
