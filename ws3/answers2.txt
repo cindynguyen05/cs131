@@ -1,0 +1,56 @@
+A1: ls -1 1> listing.txt OR ls -1 > listing.txt
+       date >> listing.txt
+A2: ls /nonexistent_dir 2> errors.txt
+A3: ls /nonexistent_dir /etc > output.txt 2> errors.txt
+A4: ls /nonexistent_dir /etc &> combined.txt 
+       OR ls /nonexistent_dir /etc > combined.txt 2>&1
+A5: after typing ls /nonexistent_dir /etc 2>/dev/null, the contents of /etc appear and there are no error
+    error messages. /dev/null is a void where we can throw away things for forever. all the eroor messages
+    were sent there so it does not appear on the terminal.
+A6: sort fruits.txt | uniq
+A7: sort fruits.txt | uniq -c | sort -nr
+A8: grep -c "ERROR" server.log
+A9: grep "ERROR" server.log > errors_only.txt
+A10: grep -oE '^[A-Z]+' server.log | sort | uniq -c | sort -nr
+     note --> safer to use ' instead of " so it does not expand
+A11: grep -oE '"state":"[[:alpha:]]+"'  /data/yelp/yelp_academic_dataset_business.json \
+| sort | uniq -c | sort -nr | head -5
+
+
+B1: after typing id i get uid=1058(ishigaki-cs25) gid=1058(ishigaki-cs25) groups=1058(ishigaki-cs25),44(video),988(docker),993(render)
+
+    uid is user id, identifying me and my permissions, gid stands for group id and their permissions
+    and all the groups i belong to
+B2: after typing ls -l fruits.txt, the first is rw meaning the owner can read and write, second is r meaning the group can only read
+    and last has nothing meaning no permission
+B3: after typing umask i get 0002 means the others group get to write, while owner and group gets no
+    permissions. umask sets default permissions for new files. i created a new file but it does not
+    match what umask predicts
+B4: chmod 000 secret.txt to remove all permissions. cat secret.txt --> permission denied
+    restore it using chmod u+rw to restore your own read and write via symbolic notation
+B5: chmod 640 fruits.txt
+B6: find ~/cs131/ws3  -type f -user $(whoami) -perm -u=w
+
+
+C1: the PID the shell prints is 2037030
+C2: after running jobs it shows:
+    [1]+  Running                 bash long.sh > log.txt &
+    it shows the job number, stauts, and command
+C3: fg %1 will show the command
+    Ctrl-Z will suspend it 
+    jobs will show nothing 
+C4: bg %1 will send it to the background
+    jobs will show that it is still running
+C5: kill %1 will kill specifically the job with [1] and jobs will show that it was terminated
+    typing kill with no argument does not kill anything. it gives us a usage/help message
+C6: ps -p 2038385
+    the number was found after typing bash long.sh > log.txt & 
+C7: disown makes shell forget its job, does not sent a SIGHUP to report that the user's terminal
+    is disconnected. it just detaches the process from the current terminal. the terminal is closed
+    but the process is still running..
+
+    so it removes the job from the shell's job table so shell does not send SUGHUP when terminal 
+    closes allowing the process to continue running
+
+    its being disowned not killed
+
