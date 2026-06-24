@@ -1,2 +1,2 @@
-#Summary
-Git branching practice
+# Summary
+Main branch update
