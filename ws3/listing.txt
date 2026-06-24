@@ -1,6 +1,14 @@
-total 8
--rw-rw-r-- 1 ishigaki-cs25 ishigaki-cs25   0 Jun 17 22:42 answers.txt
--rw-rw-r-- 1 ishigaki-cs25 ishigaki-cs25  45 Jun 17 22:42 fruits.txt
--rw-rw-r-- 1 ishigaki-cs25 ishigaki-cs25   0 Jun 17 22:43 listing.txt
--rw-rw-r-- 1 ishigaki-cs25 ishigaki-cs25 102 Jun 17 22:42 server.log
-Wed Jun 17 10:43:18 PM PDT 2026
+total 44
+-rw-rw-r-- 1 ishigaki-cs25 ishigaki-cs25 1650 Jun 23 20:05 answers.txt
+-rw-rw-r-- 1 ishigaki-cs25 ishigaki-cs25   19 Jun 17 22:55 answer.txt
+-rw-rw-r-- 1 ishigaki-cs25 ishigaki-cs25 2974 Jun 17 22:44 combined.txt
+-rw-rw-r-- 1 ishigaki-cs25 ishigaki-cs25   52 Jun 17 22:47 errors_only.txt
+-rw-rw-r-- 1 ishigaki-cs25 ishigaki-cs25   64 Jun 17 22:44 errors.txt
+-rw-r----- 1 ishigaki-cs25 ishigaki-cs25   45 Jun 23 20:05 fruits.txt
+-rw-rw-r-- 1 ishigaki-cs25 ishigaki-cs25    0 Jun 23 20:10 listing.txt
+-rw-rw-r-- 1 ishigaki-cs25 ishigaki-cs25 1232 Jun 17 23:13 log.txt
+-rw-rw-r-- 1 ishigaki-cs25 ishigaki-cs25   50 Jun 17 23:02 long.sh
+-rw------- 1 ishigaki-cs25 ishigaki-cs25   11 Jun 17 22:56 secret.txt
+-rw-rw-r-- 1 ishigaki-cs25 ishigaki-cs25  102 Jun 23 20:05 server.log
+-rw-rw-r-- 1 ishigaki-cs25 ishigaki-cs25    5 Jun 17 22:53 testfile.txt
+Tue Jun 23 08:10:27 PM PDT 2026

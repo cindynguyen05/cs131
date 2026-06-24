@@ -37,3 +37,4 @@ C4: bg
 C5: typing kill gives kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
 C6: ps -p 925671
 C7: disown allows the process to run when the terminal closes by moving it somewhere else
+B5: chmod 640 fruits.txt
